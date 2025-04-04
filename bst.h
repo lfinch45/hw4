@@ -469,8 +469,6 @@ void BinarySearchTree<Key, Value>::insert(const std::pair<const Key, Value> &key
   // Check to see if its bigger or smaller than the root
   // Keep going until you can't go any further 
   // Dont have to do rotations
-
-  // Can write this without the other TODO functions (but can still use them if needed)
   
   // Base case: empty tree
   if(root_ == nullptr){
@@ -522,7 +520,6 @@ void BinarySearchTree<Key, Value>::remove(const Key& key)
     
   // Have to find where it is first
   Node<Key, Value>* current = root_;
-  // Node<Key, Value>* parent = nullptr;
 
   while(current != nullptr && current->getKey() != key){
     // parent = current; // Moving down the tree
@@ -757,6 +754,8 @@ int BinarySearchTree<Key, Value>::findHeight(Node<Key, Value>* node) const{
   return std::max(lheight, rheight) + 1;
 
 }
+
+
 
 template<typename Key, typename Value>
 bool BinarySearchTree<Key, Value>::balanceHelper(Node<Key, Value>* node) const{
